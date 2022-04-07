@@ -1,5 +1,6 @@
 <template>
   <div id="jumbotron">
+    <!--TOP-->
     <div class="container-fluid px-0">
       <div class="row text-white justify-content-center py-3">
         <div class="col-3 text-center">
@@ -12,7 +13,21 @@
           <span><i class="fas fa-check"></i> We price match to give you the </span> <span class="fw-bold"> best deals</span>
         </div>
       </div>
-      <div class="image-brand">
+      <div class="image-brand d-flex align-items-center">
+        <div class="brand-description">
+          <h6 class="text-white">FIND THE BEST ANIMAL SUPPLIES</h6>
+          <p class="text-white fw-bolder">We know animals are a part of your family, let us help take care of them.</p>
+          <button class="border-0">Learn more about us</button>
+        </div>
+      </div>
+      <!--Bottom-->
+      <div class="row justify-content-center align-items-center">
+        <div class="col-2">
+          <img src="../assets/images/food-transparent-5-200x112.png" id="size" alt="">
+        </div>
+        <div class="col-4 text-white">
+          <span class="me-4">Get $25 OFF your first purchase of our homemade pet food!</span> <a href="#">Visit the shop</a>
+        </div>
       </div>
     </div>
   </div>
@@ -32,20 +47,24 @@ export default {
   background-image: url('../assets/images/bg-transparent-3.png');
   .image-brand{
     height: 570px;
+    padding: 20px 200px;
     background-image: url('../assets/images/banner-5-2x-scaled.jpg');
     background-size: cover;
     width: 100%;
     height: 846px;
-    position: relative;
+    .brand-description{
+      width: 600px;
+      p{
+        font-size: 2.20em;
+      }
+      button{
+        border-radius: 30px;
+        padding: 10px 30px;
+      }
+    }
   }
-  .image-brand::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
+  #size{
+    width: 250px;
   }
 }
 </style>

@@ -28,11 +28,11 @@
     <div class="bottom-header py-2">
       <nav>
         <ul class="d-flex justify-content-center list-unstyled mb-0">
-          <li v-for="(link, index) in HeaderLinks" :key="index"> 
+          <li v-for="(link, index) in HeaderLinks" :key="'primo'+index"> 
             <a href="#" class="m-3 text-decoration-none text-dark fw-bold">{{link.text}}<span class="fas fa-angle-down ms-2"></span></a>
           </li>
-          <li v-for="(link, index) in HeaderLinksSpecial" :key="index">
-            <a href="#" class="m-3 text-decoration-none text-dark fw-bold">{{link.text}}</a>
+          <li v-for="(element, index) in HeaderLinksSpecial" :key="'secondo'+index">
+            <a href="#" class="m-3 text-decoration-none text-dark fw-bold">{{element.text}}</a>
           </li>
         </ul>
       </nav>
