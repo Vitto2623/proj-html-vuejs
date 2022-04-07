@@ -2,7 +2,7 @@
   <div>
     <!--TOP HEADER-->
     <div class="my-container">
-      <div class="container-fluid text-center py-2 my-header">
+      <div class="container-fluid text-center py-2 top-header">
         <div class="row justify-content-center  align-items-center">
           <div class="col-3">
             <img src="../assets/images/dark-pet-logo.png" alt="Brand-logo">
@@ -25,11 +25,14 @@
     </div>
 
     <!---BOTTOM HEADER-->
-    <div class="my-header py-2">
+    <div class="bottom-header py-2">
       <nav>
-        <ul class="d-flex justify-content-center list-unstyled">
-          <li>
-            <a href="#" class="m-4 text-decoration-none text-dark">prova<span class="fas fa-angle-down ms-1"></span></a>
+        <ul class="d-flex justify-content-center list-unstyled mb-0">
+          <li v-for="(link, index) in HeaderLinks" :key="index"> 
+            <a href="#" class="m-3 text-decoration-none text-dark fw-bold">{{link.text}}<span class="fas fa-angle-down ms-2"></span></a>
+          </li>
+          <li v-for="(link, index) in HeaderLinksSpecial" :key="index">
+            <a href="#" class="m-3 text-decoration-none text-dark fw-bold">{{link.text}}</a>
           </li>
         </ul>
       </nav>
@@ -39,7 +42,39 @@
 
 <script>
 export default {
-    name : 'IndexHeader'
+    name : 'IndexHeader',
+    data: function () {
+    return {
+      HeaderLinks: [
+        {
+          text: 'Home',
+          url: '#',
+        },
+        {
+          text: 'Shop',
+          url: '#',
+        },
+        {
+          text: 'Shop My Brand',
+          url: '#',
+        }
+      ],
+      HeaderLinksSpecial: [
+        {
+          text: 'About',
+          url: '#',
+        },
+        {
+          text: 'Blog',
+          url: '#'
+        },
+        {
+          text: 'Contact',
+          url: '#'
+        }
+      ]
+    };
+  }
 }
 </script>
 
@@ -48,12 +83,22 @@ export default {
 .my-container{
   border-bottom: 1px solid lightgrey;
 }
-div.my-header{
+div.top-header{
   width: $width;
   min-width: $min-width;
+}
+div.bottom-header{
+  height: 55px;
   .fa-angle-down{
     font-size: 12px;
     vertical-align: baseline;
+  }
+  ul{
+    height: 40px;
+    line-height: 55px;
+    li{
+      line-height: 40px;
+    }
   }
 }
 #wrap{
