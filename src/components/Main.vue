@@ -10,7 +10,7 @@
     </div>
     <div class="container-fluid">
       <div class="row justify-content-center mb-5">
-        <div class="col-2 text-center mb-5" v-for="(element, index) in product" :key="'primo'+index">
+        <div class="col-2 d-flex flex-column align-items-center mb-5" v-for="(element, index) in product" :key="'primo'+index">
           <div class="item-card">
             <img :src="require(`../assets/images/${element.image}`)" alt="">
           </div>
@@ -24,7 +24,7 @@
       :key="'secondo'+index">
         <h1>{{element.name}}</h1>
         <h6>{{element.type}}</h6>
-        <img :src="require(`../assets/images/${element.image}`)"  alt="">
+        <img :src="require(`../assets/images/${element.image}`)"  alt="foods-products">
         <button class="border-0">{{element.shop}}</button>
       </div>
     </div>
@@ -33,8 +33,27 @@
       <h2 class="text-white fs-1 fw-bolder mb-4">New arrivals weekly</h2>
       <button class="border-0 text-black">Learn more about us</button>
     </div>
-    <div class="section-best-sellers">
-      
+    <div class="container-fluid">
+      <div class="row my-row mt-5">
+        <!--Top-section-->
+        <div class="top d-flex justify-content-between align-items-center mt-5">
+          <div>
+            <h6>All-time best sellers</h6>
+            <h3>Items everyone loves</h3>
+          </div>
+          <button class="border-0">View all products</button>
+        </div>
+      </div>
+      <!--Bottom-section-->
+      <div class="row justify-content-center mt-5">
+        <div class="col-2 m-1 d-flex flex-column align-items-center" v-for="(element, index) in product2" :key="'terzo' +index">
+          <div class="item-card d-flex align-items-center justify-content-center">
+            <img :src="require(`../assets/images/${element.image}`)" alt="products">
+          </div>
+          <h5 class="mt-3">{{element.name}}</h5>
+          <h5 style="color: #3d6f42;" class="fs-6">{{element.price}}</h5>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -81,7 +100,29 @@ export default {
             image: "food-transparent-16.png",
             shop: 'Shop frozen food'
           }
-        ]
+        ],
+        product2: [
+          {
+            image: "product-21-200x200.jpg",
+            name: 'Transport cage',
+            price: '$25.00'
+          },
+          {
+            image: "product-20-200x200.jpg",
+            name: 'Dog leash',
+            price: '$25.00'
+          },
+          {
+            image: "product-16-200x200.jpg",
+            name: 'Animal transport cage',
+            price: '$̶3̶5̶.̶0̶0̶ $25.00'
+          },
+          {
+            image: "product-21-200x200.jpg",
+            name: 'Colorful cat leash',
+            price: '$12.00'
+          }
+        ],
       }
     }
 }
@@ -142,6 +183,20 @@ p{
     padding: 5px 20px;
     border-radius: 50px;
     color: white;
+  }
+}
+
+.my-row{
+  margin: 0 auto;
+  width: 68%;
+  h6{
+    color: #3d6f42;
+  }
+  button{
+    padding: 5px 20px;
+    border-radius: 50px;
+    color: white;
+    background-color: #3d6f42;
   }
 }
 </style>
