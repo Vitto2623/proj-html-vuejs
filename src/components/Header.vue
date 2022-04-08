@@ -85,7 +85,6 @@ export default {
 }
 div.top-header{
   width: $width;
-  min-width: $min-width;
 }
 div.bottom-header{
   height: 55px;

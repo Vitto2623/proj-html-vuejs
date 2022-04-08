@@ -27,7 +27,7 @@ export default {
 <style lang="scss">
 @import "~bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
-
+@import "./assets/scss/style.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }

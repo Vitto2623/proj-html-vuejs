@@ -30,6 +30,16 @@
         </div>
       </div>
     </div>
+    <div id="mini-cards">
+      <div class="my-card d-flex flex-column justify-content-center align-items-center">
+        <i class="fas fa-folder"></i>
+        <p>Demos</p>
+      </div>
+      <div class="my-card mt-1 d-flex flex-column justify-content-center align-items-center">
+        <p class="fs-5" style="color: green; height: 25px;"><span style="vertical-align: super; color: green;" class="fs-6">$</span>39</p>
+        <p>On sale</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,6 +55,7 @@ export default {
   width: 100%;
   background-color: $color-brand;
   background-image: url('../assets/images/bg-transparent-3.png');
+  position: relative;
   .image-brand{
     height: 570px;
     padding: 20px 200px;
@@ -65,6 +76,22 @@ export default {
   }
   #size{
     width: 250px;
+  }
+  #mini-cards{
+    position: absolute;
+    top: 23px;
+    right: 12px;
+    .my-card{
+      height: 45px;
+      width: 45px;
+      border-radius: 5px;
+      background-color: white;
+      p{
+        font-size: 0.70em;
+        margin: 0px;
+        font-weight: bold;
+      }
+    }
   }
 }
 </style>
