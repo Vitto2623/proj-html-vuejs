@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import 'animate.css';
 @import "~bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "./assets/scss/style.scss";

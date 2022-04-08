@@ -195,7 +195,7 @@
                   <div class="overlay">
                     <a href="#" class="icon text-decoration-none">
                       <i class="fas fa-check"></i>
-                      <h6>VIEW CART</h6>
+                      <h6 class="text-white">VIEW CART</h6>
                     </a>
                   </div>
                 </div>
@@ -210,7 +210,7 @@
                   <div class="overlay">
                     <a href="#" class="icon text-decoration-none">
                       <i class="fas fa-check"></i>
-                      <h6>VIEW CART</h6>
+                      <h6 class="text-white">VIEW CART</h6>
                     </a>
                   </div>
                 </div>
@@ -226,7 +226,7 @@
                   <div class="overlay">
                     <a href="#" class="icon text-decoration-none">
                       <i class="fas fa-check"></i>
-                      <h6>VIEW CART</h6>
+                      <h6 class="text-white">VIEW CART</h6>
                     </a>
                   </div>
                 </div>
@@ -244,7 +244,7 @@
                   <div class="overlay">
                     <a href="#" class="icon text-decoration-none">
                       <i class="fas fa-check"></i>
-                      <h6>VIEW CART</h6>
+                      <h6 class="text-white">VIEW CART</h6>
                     </a>
                   </div>
                 </div>

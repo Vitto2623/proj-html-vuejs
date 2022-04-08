@@ -16,8 +16,8 @@
       <div class="image-brand d-flex align-items-center">
         <div class="lay-over"></div>
         <div class="brand-description">
-          <h6 class="text-white">FIND THE BEST ANIMAL SUPPLIES</h6>
-          <p class="text-white fw-bolder">We know animals are a part of your family, let us help take care of them.</p>
+          <h6 class="text-white fw-bolder">FIND THE BEST ANIMAL SUPPLIES</h6>
+          <p class="text-white fw-bolder animate__animated animate__fadeInLeft">We know animals are a part of your family, let us help take care of them.</p>
           <button class="border-0" id="hover">Learn more about us</button>
         </div>
       </div>
@@ -52,6 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/style.scss";
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 #jumbotron{
   width: 100%;
   background-color: $color-brand;
@@ -64,6 +65,7 @@ export default {
     background-size: cover;
     width: 100%;
     height: 846px;
+    font-family: 'PT Serif', serif;
     .brand-description{
       width: 600px;
       p{
