@@ -29,10 +29,10 @@
       <nav>
         <ul class="d-flex justify-content-center list-unstyled mb-0">
           <li v-for="(link, index) in HeaderLinks" :key="'primo'+index"> 
-            <a href="#" class="m-3 text-decoration-none text-dark fw-bold">{{link.text}}<span class="fas fa-angle-down ms-2"></span></a>
+            <a href="#" class="m-3 text-decoration-none fw-bold" :class="{active: link.current}">{{link.text}}<span class="fas fa-angle-down ms-2"></span></a>
           </li>
           <li v-for="(element, index) in HeaderLinksSpecial" :key="'secondo'+index">
-            <a href="#" class="m-3 text-decoration-none text-dark fw-bold">{{element.text}}</a>
+            <a href="#" class="m-3 text-decoration-none  fw-bold">{{element.text}}</a>
           </li>
         </ul>
       </nav>
@@ -49,6 +49,7 @@ export default {
         {
           text: 'Home',
           url: '#',
+          current: true
         },
         {
           text: 'Shop',
@@ -97,6 +98,14 @@ div.bottom-header{
     line-height: 55px;
     li{
       line-height: 40px;
+      a{
+        color: grey;
+        &.active,
+        &:hover{
+          color: black;
+        }
+
+      }
     }
   }
 }

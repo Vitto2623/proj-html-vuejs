@@ -14,10 +14,11 @@
         </div>
       </div>
       <div class="image-brand d-flex align-items-center">
+        <div class="lay-over"></div>
         <div class="brand-description">
           <h6 class="text-white">FIND THE BEST ANIMAL SUPPLIES</h6>
           <p class="text-white fw-bolder">We know animals are a part of your family, let us help take care of them.</p>
-          <button class="border-0">Learn more about us</button>
+          <button class="border-0" id="hover">Learn more about us</button>
         </div>
       </div>
       <!--Bottom-->
@@ -56,6 +57,7 @@ export default {
   background-color: $color-brand;
   background-image: url('../assets/images/bg-transparent-3.png');
   .image-brand{
+    position: relative;
     height: 570px;
     padding: 20px 300px;
     background-image: url('../assets/images/banner-5-2x-scaled.jpg');
@@ -70,6 +72,10 @@ export default {
       button{
         border-radius: 30px;
         padding: 10px 30px;
+        &:hover{
+        background-color: #3d6f42;
+        color: white;
+        }
       }
     }
   }

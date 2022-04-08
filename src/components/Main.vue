@@ -8,14 +8,23 @@
           </div>
         </div>
       </div>
+      <!--Articoli-per-cani-->
       <div class="container-fluid">
         <div class="row justify-content-center mb-5">
-          <div class="col-2 d-flex flex-column align-items-center mb-5" v-for="(element, index) in product" :key="'primo'+index">
-            <div class="item-card">
-              <img :src="require(`../assets/images/${element.image}`)" alt="">
+            <div class="col-2 d-flex flex-column align-items-center mb-5" v-for="(element, index) in product" :key="'primo'+index">
+                  <div class="item-card">
+                    <div class="container-overlay">
+                      <img :src="require(`../assets/images/${element.image}`)" alt="" class="image">
+                      <div class="overlay">
+                        <a href="#" class="icon text-decoration-none">
+                          <i class="fas fa-check"></i>
+                          <h6>VIEW CART</h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="mt-4">{{element.name}}</h5>
             </div>
-            <h5 class="mt-4">{{element.name}}</h5>
-          </div>
         </div>
       </div>
       <!--Food-Section-->
@@ -28,10 +37,12 @@
           <button class="border-0">{{element.shop}}</button>
         </div>
       </div>
+      <!---->
       <div class="arrivals-weekly">
+        <div class="lay-over"></div>
         <h6 class="text-white mb-4">FIND THE BEST ANIMAL SUPPLIES</h6>
         <h2 class="text-white fs-1 fw-bolder mb-4">New arrivals weekly</h2>
-        <button class="border-0 text-black">Learn more about us</button>
+        <button class="border-0">Learn more about us</button>
       </div>
       <div class="container-fluid">
         <div class="row my-row mt-5">
@@ -48,7 +59,15 @@
         <div class="row justify-content-center mt-5">
           <div class="col-2 m-1 d-flex flex-column align-items-center" v-for="(element, index) in product2" :key="'terzo' +index">
             <div class="item-card d-flex align-items-center justify-content-center">
-              <img :src="require(`../assets/images/${element.image}`)" alt="products">
+                <div class="container-overlay">
+                  <img :src="require(`../assets/images/${element.image}`)" alt="products" class="image">
+                  <div class="overlay">
+                    <a href="#" class="icon text-decoration-none">
+                      <i class="fas fa-check"></i>
+                      <h6>VIEW CART</h6>
+                    </a>
+                  </div>
+                </div>
             </div>
             <h5 class="mt-3">{{element.name}}</h5>
             <h5 style="color: #3d6f42;" class="fs-6">{{element.price}}</h5>
@@ -101,7 +120,14 @@
           <div class="row justify-content-center mt-5">
             <div class="col-2 m-1 d-flex flex-column align-items-center" v-for="(element, index) in articles" :key="'quarto' +index">
               <div class="item-card">
-                <img :src="require(`../assets/images/${element.image}`)" alt="articles">
+                <div class="container-overlay">
+                  <img :src="require(`../assets/images/${element.image}`)" alt="articles">
+                  <div class="overlay d-flex justify-content-center align-items-center px-5">
+                    <a href="#" class="text-decoration-none">
+                      <h6 class="text-white fs-3">{{element.overText}}</h6>
+                    </a>
+                  </div>
+                </div>
                 <!--Product-description-->
                 <div class="p-4">
                   <h5>{{element.text}}</h5>
@@ -120,14 +146,16 @@
         <div id="section-of-best-products">
           <div class="d-flex">
             <div id="left-image" class="d-flex flex-column align-items-center justify-content-center">
+              <div class="lay-over"></div>
               <h6 class="text-white">FIND THE BEST ANIMAL SUPPLIES</h6>
               <h2 class="text-white mt-3">Popular accessories</h2>
-              <button class="border-0 bg-white text-black mt-3">View all toys accessories</button>
+              <button class="border-0 mt-3">View all toys accessories</button>
             </div>
             <div id="right-image" class="d-flex flex-column align-items-center justify-content-center">
+              <div class="lay-over"></div>
               <h6 class="text-white">FIND THE BEST FOOD</h6>
               <h2 class="text-white mt-3">New food arrival</h2>
-              <button class="border-0 bg-white text-black mt-3">View all food arrival</button>
+              <button class="border-0 mt-3">View all food arrival</button>
             </div>
           </div>
           <div class="container-fluid text-center">
@@ -162,22 +190,46 @@
           <div class="row justify-content-center mt-4">
             <div class="col-2 d-flex flex-column align-items-center">
               <div class="item-card-2 mb-4">
-                <img src="../assets/images/product-8-500x500.jpg" class="img-fluid" alt="">
+                <div class="container-overlay">
+                  <img src="../assets/images/product-8-500x500.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <a href="#" class="icon text-decoration-none">
+                      <i class="fas fa-check"></i>
+                      <h6>VIEW CART</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
               <h6 class="text-black">Colored pet bed</h6>
               <h6>$18.00 - $26.00</h6>
             </div>
             <div class="col-2 d-flex flex-column align-items-center">
               <div class="item-card-2 mb-4">
+                <div class="container-overlay">
                   <img src="../assets/images/product-2-500x500.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <a href="#" class="icon text-decoration-none">
+                      <i class="fas fa-check"></i>
+                      <h6>VIEW CART</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
               <h6 class="text-black">Dog bone</h6>
               <h6>$29.00</h6>
             </div>
             <div class="col-2 d-flex flex-column align-items-center">
               <div class="item-card mb-4">
-                <div id="special" class="rounded-circle">Sale!</div>
-                <img src="../assets/images/product-3-500x500.jpg" class="img-fluid" alt="">
+                <div class="container-overlay">
+                  <div id="special" class="rounded-circle">Sale!</div>
+                  <img src="../assets/images/product-3-500x500.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <a href="#" class="icon text-decoration-none">
+                      <i class="fas fa-check"></i>
+                      <h6>VIEW CART</h6>
+                    </a>
+                  </div>
+                </div>
               </div> 
               <h6 class="text-black mt-5">Dog bone</h6>
               <h6>$̶2̶9̶.̶0̶0̶ $18.00</h6>
@@ -187,7 +239,15 @@
           <div class="row justify-content-center mt-5">
             <div class="col-2 d-flex flex-column align-items-center" v-for="(element, index) in articles2" :key="'quinto' +index">
               <div class="item-card-2 mb-4">
-                <img :src="require(`../assets/images/${element.image}`)" class="img-fluid" alt="articles">
+                <div class="container-overlay">
+                  <img :src="require(`../assets/images/${element.image}`)" class="img-fluid" alt="articles">
+                  <div class="overlay">
+                    <a href="#" class="icon text-decoration-none">
+                      <i class="fas fa-check"></i>
+                      <h6>VIEW CART</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
               <h6 class="text-black">{{element.text}}</h6>
               <h6>{{element.price}}</h6>
@@ -205,19 +265,19 @@ export default {
       return{
         product: [
           {
-            image: "product-9-300x300.jpg",
+            image: "product-9-500x500.jpg",
             name: 'Bed (1)'
           },
           {
-            image: "product-3-300x300.jpg",
+            image: "product-3-500x500.jpg",
             name: 'Food (6)'
           },
           {
-            image: "product-2-300x300.jpg",
+            image: "product-2-500x500.jpg",
             name: 'Toys (6)'
           },
           {
-            image: "product-4-300x300.jpg",
+            image: "product-4-500x500.jpg",
             name: 'Transport (6)'
           },
         ],
@@ -266,21 +326,25 @@ export default {
         articles: [
           {
             image: "blog-1.jpg",
+            overText: "How to loose leash walk your dog",
             text: 'How to loose leash walk your dog',
             date: 'April 21st, 2020'
           },
           {
             image: "blog-2.jpg",
+            overText: "Stop cats from scratching furniture",
             text: 'Stop cats from scratching furniture',
             date: 'April 19st, 2020'
           },
           {
             image: "blog-3.jpg",
+            overText: "Where to buy the best pet food",
             text: 'Where to buy the best pet food',
             date: 'April 18st, 2020'
           },
           {
             image: "blog-4.jpg",
+            overText: "Proper care for your pet toys",
             text: 'Proper care for your pet toys',
             date: 'April 17st, 2020'
           }
@@ -317,8 +381,14 @@ p{
   width: 300px;
   height: 300px;
   background-color: $cards-color;
+  transition: 1.3s;
+  cursor: pointer;
   img{
     width: 100%;
+  }
+  &:hover{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 20px 0 rgba(0, 0, 0, 1);
+      transform: translateY(-20px);
   }
 }
 
@@ -333,6 +403,8 @@ p{
   background-image: url('../assets/images/bg-transparent-3.png');
   background-size: 300px;
   background-color: $color-brand;
+  transition: 1.3s;
+  cursor: pointer;
     h1{
       color: white;
     }
@@ -349,6 +421,10 @@ p{
       border-radius: 50px;
       color: white;
     }
+    &:hover{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 20px 0 rgba(0, 0, 0, 1);
+      transform: translateY(-20px);
+    }
   }
 }
 
@@ -363,11 +439,20 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 1.2s;
   button{
     padding: 5px 20px;
     border-radius: 50px;
-    color: white;
+    color: black;
     background-color: white;
+    &:hover{
+        background-color: #3d6f42;
+        color: white;
+    }
+  }
+  &:hover{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 20px 0 rgba(0, 0, 0, 1);
+      transform: translateY(-20px);
   }
 }
 
@@ -435,18 +520,34 @@ button{
   button{
     padding: 5px 20px;
     border-radius: 50px;
+    color: black;
+    background-color: white;
+    &:hover{
+        background-color: #3d6f42;
+        color: white;
+    }
   }
   #left-image{
     width: 50%;
     height: 480px;
     background-image: url('../assets/images/banner-8-2x.jpg');
     background-size: cover;
+    transition: 1.2s;
+    &:hover{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 20px 0 rgba(0, 0, 0, 1);
+      transform: translateY(-20px);
+    }
   }
   #right-image{
     width: 50%;
     height: 480px;
     background-image: url('../assets/images/banner-9-2x.jpg');
     background-size: cover;
+    transition: 1.2s;
+    &:hover{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 20px 0 rgba(0, 0, 0, 1);
+      transform: translateY(-20px);
+    }
   }
 }
 
@@ -454,6 +555,12 @@ button{
   width: 300px;
   height: 351px;
   background-color: #faf4f4;
+  transition: 1.2s;
+  cursor: pointer;
+  &:hover{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 20px 0 rgba(0, 0, 0, 1);
+      transform: translateY(-20px);
+  }
 }
 
 #special{
@@ -464,5 +571,50 @@ button{
   font-size: 0.90em;
   color: white;
   cursor: pointer;
+}
+
+.container-overlay{
+  position: relative;
+  width: 100%;
+  .image{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .icon{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    .fa-check:hover {
+      color: black;
+    }
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 70px;
+    padding: 20px;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0, 0, 0, 0.2);
+    h6:hover{
+      color: black;
+    }
+  }
+}
+
+.container-overlay:hover .overlay {
+  opacity: 1;
 }
 </style>
