@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-        <!---->
+      <!--Food-Section-->
       <div class="my-container">
         <div class="food-card d-flex flex-column text-center align-items-center justify-content-center" v-for="(element, index) in food" 
         :key="'secondo'+index">
@@ -229,36 +229,36 @@ export default {
             shop: 'Shop dry food'
           },
           {
-            name: 'Kibble',
-            type: 'Dry dog food',
+            name: 'Moist',
+            type: 'Canned dog food',
             image: "food-transparent-17.png",
             shop: 'Shop moist food'
           },
           {
-            name: 'Kibble',
-            type: 'Dry dog food',
+            name: 'Frozen',
+            type: 'Freeze-Dried dog food',
             image: "food-transparent-16.png",
             shop: 'Shop frozen food'
           }
         ],
         product2: [
           {
-            image: "product-21-200x200.jpg",
+            image: "product-21-800x800.jpg",
             name: 'Transport cage',
             price: '$25.00'
           },
           {
-            image: "product-20-200x200.jpg",
+            image: "product-20-800x800.jpg",
             name: 'Dog leash',
             price: '$25.00'
           },
           {
-            image: "product-16-200x200.jpg",
+            image: "product-16-800x800.jpg",
             name: 'Animal transport cage',
             price: '$̶3̶5̶.̶0̶0̶ $25.00'
           },
           {
-            image: "product-21-200x200.jpg",
+            image: "product-21-800x800.jpg",
             name: 'Colorful cat leash',
             price: '$12.00'
           }
@@ -325,11 +325,11 @@ p{
 .my-container{
   margin: 0 auto;
   display: flex;
-  width: 1250px;
+  padding: 0px 18%;
   gap: 1%;
   .food-card{
   width: 33%;
-  height: 490px;
+  height: 650px;
   background-image: url('../assets/images/bg-transparent-3.png');
   background-size: 300px;
   background-color: $color-brand;
@@ -340,11 +340,12 @@ p{
       color: #43764a;
     }
     img{
-      width: 200px;
+      width: 289px;
+      margin: 37px;
     }
     button{
       background-color: #3d6f42;
-      padding: 5px 20px;
+      padding: 8px 20px;
       border-radius: 50px;
       color: white;
     }

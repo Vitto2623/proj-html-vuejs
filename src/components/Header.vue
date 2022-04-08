@@ -21,7 +21,7 @@
             <i class="fas fa-user"></i>
           </div>
         </div>
-    </div>
+      </div>
     </div>
 
     <!---BOTTOM HEADER-->
@@ -84,7 +84,7 @@ export default {
   border-bottom: 1px solid lightgrey;
 }
 div.top-header{
-  width: $width;
+  padding: 0px 200px;
 }
 div.bottom-header{
   height: 55px;

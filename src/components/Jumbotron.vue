@@ -55,10 +55,9 @@ export default {
   width: 100%;
   background-color: $color-brand;
   background-image: url('../assets/images/bg-transparent-3.png');
-  position: relative;
   .image-brand{
     height: 570px;
-    padding: 20px 200px;
+    padding: 20px 300px;
     background-image: url('../assets/images/banner-5-2x-scaled.jpg');
     background-size: cover;
     width: 100%;
@@ -78,14 +77,15 @@ export default {
     width: 250px;
   }
   #mini-cards{
-    position: absolute;
-    top: 23px;
+    position: fixed;
+    top: 150px;
     right: 12px;
+    cursor: pointer;
     .my-card{
       height: 45px;
       width: 45px;
       border-radius: 5px;
-      background-color: white;
+      background-color: lightgrey;
       p{
         font-size: 0.70em;
         margin: 0px;
