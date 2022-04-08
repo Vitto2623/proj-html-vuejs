@@ -37,6 +37,29 @@
             </div>
           </form>
         </div>
+        <div id="bottom" class=" d-flex justify-content-center flex-column align-items-center">
+          <nav>
+            <ul class="d-flex mt-5">
+              <li class="mx-3 list-unstyled" v-for="(element, index) in NavLinks4" :key="'quarto'+index">
+                <a href="#" class="text-decoration-none text-white">{{element.text}}</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="d-flex justify-content-center">
+            <a href="#"><i class="fab fa-facebook-f m-3 text-white"></i></a>
+            <a href="#"><i class="fab fa-twitter m-3 text-white"></i></a>
+            <a href="#"><i class="fab fa-instagram m-3 text-white"></i></a>
+            <a href="#"> <i class="fab fa-youtube m-3 text-white"></i></a>
+          </nav>
+        </div>
+      </div>
+      <div id="bottom-footer" class="text-center">
+        <h6 class="text-white">© Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</h6>
+        <form action="#">
+          <button id="go-up">
+            <i class="fas fa-angle-up text-white"></i>
+          </button>
+        </form>
       </div>
     </div>
   </div>
@@ -85,6 +108,23 @@ export default {
           {
             text: 'Cart'
           }
+        ],
+        NavLinks4:[
+          {
+            text: 'Home'
+          },
+          {
+            text: 'About'
+          },
+          {
+            text: 'Blog'
+          },
+          {
+            text: 'Contact'
+          },
+          {
+            text: 'Shop'
+          }
         ]
       }
     }
@@ -95,7 +135,6 @@ export default {
 .footer{
   margin-top: 3160px;
   width: 100%;
-  height: 700px;
   background-color: lightgrey;
   #top-footer{
     background-color: #253025;
@@ -128,6 +167,28 @@ export default {
           padding: 10px;
           background-color: #3d6f42;
         }
+      }
+    }
+  }
+  #bottom-footer{
+    background-color: black;
+    width: 100%;
+    height: 66px;
+    position: relative;
+    h6{
+      line-height: 66px;
+    }
+    form{
+      position: absolute;
+      bottom: 0px;
+      right: 55px;
+      #go-up{
+        width: 34px;
+        height: 33px;
+        background-color: #2e2e2e;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border: none
       }
     }
   }
