@@ -36,5 +36,6 @@ export default {
 
 body{
   min-width: 1834px;
+  background-color: $color-brand;
 }
 </style>
