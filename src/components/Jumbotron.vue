@@ -57,6 +57,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 #jumbotron{
   width: 100%;
+  margin-top: 122px;
   background-color: $color-brand;
   background-image: url('../assets/images/bg-transparent-3.png');
   .image-brand{

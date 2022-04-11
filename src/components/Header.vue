@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="fixed-top bg-white shadow">
     <!--TOP HEADER-->
     <div class="my-container">
       <div class="container-fluid text-center py-2 top-header">
@@ -112,6 +112,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/style.scss";
+
+header{
+  z-index: 2;
+}
+
 .my-container{
   border-bottom: 1px solid lightgrey;
 }
