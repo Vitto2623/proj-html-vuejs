@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-
+    <!--/ TOP HEADER-->
     <!---BOTTOM HEADER-->
     <div class="bottom-header py-2">
       <!--NAV-BAR-CON-TENDINA-DINAMICA-->
@@ -45,6 +45,7 @@
       </nav>
       <!--/ NAV-BAR-->
     </div>
+    <!--- /BOTTOM HEADER-->
   </div>
 </template>
 

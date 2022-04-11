@@ -21,7 +21,8 @@
           <button class="border-0 animate__animated animate__fadeInLeft" id="hover">Learn more about us</button>
         </div>
       </div>
-      <!--Bottom-->
+      <!--/ TOP-->
+      <!--BOTTOM-->
       <div class="row justify-content-center align-items-center">
         <div class="col-2 animate__animated animate__fadeInTopLeft">
           <img src="../assets/images/food-transparent-5-200x112.png" id="size" alt="">
@@ -30,6 +31,7 @@
           <span class="me-4">Get $25 OFF your first purchase of our homemade pet food!</span> <a href="#">Visit the shop</a>
         </div>
       </div>
+      <!--/ BOTTOM-->
     </div>
     <div id="mini-cards">
       <div class="my-card d-flex flex-column justify-content-center align-items-center">
