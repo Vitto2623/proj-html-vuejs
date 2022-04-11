@@ -55,11 +55,11 @@
       </div>
       <div id="bottom-footer" class="text-center">
         <h6 class="text-white">© Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</h6>
-        <form action="#">
-          <button id="go-up">
+        <div id="my-div">
+          <a href="#" id="go-up">
             <i class="fas fa-angle-up text-white"></i>
-          </button>
-        </form>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -178,9 +178,9 @@ export default {
     h6{
       line-height: 66px;
     }
-    form{
+    #my-div{
       position: absolute;
-      bottom: 0px;
+      bottom: 3px;
       right: 55px;
       #go-up{
         width: 34px;
@@ -188,7 +188,8 @@ export default {
         background-color: #2e2e2e;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        border: none
+        border: none;
+        padding: 4px 12px;
       }
     }
   }
