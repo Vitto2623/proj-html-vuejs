@@ -26,7 +26,7 @@
 
     <!---BOTTOM HEADER-->
     <div class="bottom-header py-2">
-      <!--NAV-BAR-->
+      <!--NAV-BAR-CON-TENDINA-DINAMICA-->
       <nav>
         <ul class="d-flex justify-content-center list-unstyled mb-0">
           <li v-for="(link, index) in HeaderLinks" :key="'primo'+index" class="d-flex justify-content-center align-items-center">
