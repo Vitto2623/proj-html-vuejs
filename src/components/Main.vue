@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
       <div class="container-fluid text-center p-5">
         <div class="row p-5">
           <div class="col-12">
@@ -255,7 +255,7 @@
           </div>
         </div>
       </div>
-  </div>
+  </main>
 </template>
 
 <script>

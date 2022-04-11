@@ -31,5 +31,11 @@ export default {
 @import "./assets/scss/style.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+
+body{
+  min-width: 1834px;
+  background-color: $color-brand;
 }
 </style>

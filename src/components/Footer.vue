@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <footer>
     <div class="footer">
       <div id="top-footer">
         <div id="top" class="d-flex  justify-content-between">
@@ -9,7 +9,7 @@
             </a>
             <ul class="text-white list-unstyled mt-4">
               <li v-for="(element, index) in NavLinks1" :key="'primo'+index">
-                <a href="#" class="text-decoration-none text-white">{{element.text}}</a>
+                <a href="#" class="text-decoration-none">{{element.text}}</a>
               </li>
             </ul>
           </nav>
@@ -17,7 +17,7 @@
             <ul class="list-unstyled">
                 <h5>Shop by brand</h5>
               <li v-for="(element, index) in NavLinks2" :key="'secondo'+index" class="mt-4">
-                <a href="#" class="text-decoration-none text-white">{{element.text}}</a>
+                <a href="#" class="text-decoration-none">{{element.text}}</a>
               </li>
             </ul>
           </nav>
@@ -25,7 +25,7 @@
             <ul class="list-unstyled">
               <h5>Useful links</h5>
               <li v-for="(element, index) in NavLinks3" :key="'terzo'+index" class="mt-4">
-                <a href="#" class="text-decoration-none text-white">{{element.text}}</a>
+                <a href="#" class="text-decoration-none">{{element.text}}</a>
               </li>
             </ul>
           </nav>
@@ -41,7 +41,7 @@
           <nav>
             <ul class="d-flex mt-5">
               <li class="mx-3 list-unstyled" v-for="(element, index) in NavLinks4" :key="'quarto'+index">
-                <a href="#" class="text-decoration-none text-white">{{element.text}}</a>
+                <a href="#" class="text-decoration-none">{{element.text}}</a>
               </li>
             </ul>
           </nav>
@@ -62,7 +62,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -190,6 +190,12 @@ export default {
         border-top-right-radius: 5px;
         border: none
       }
+    }
+  }
+  a{
+    color: white;
+    &:hover{
+    color: green;
     }
   }
 }
