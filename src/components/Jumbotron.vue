@@ -2,7 +2,7 @@
   <div id="jumbotron">
     <!--TOP-->
     <div class="container-fluid px-0">
-      <div class="row text-white justify-content-center py-3">
+      <div class="row text-white justify-content-center py-3 animate__animated animate__fadeInUp">
         <div class="col-3 text-center">
           <span class="fw-bold"><i class="fas fa-map"></i> International</span> <span>Shipping Services</span>
         </div>
@@ -16,17 +16,17 @@
       <div class="image-brand d-flex align-items-center">
         <div class="lay-over"></div>
         <div class="brand-description">
-          <h6 class="text-white fw-bolder">FIND THE BEST ANIMAL SUPPLIES</h6>
+          <h6 class="text-white fw-bolder animate__animated animate__fadeInLeft">FIND THE BEST ANIMAL SUPPLIES</h6>
           <p class="text-white fw-bolder animate__animated animate__fadeInLeft">We know animals are a part of your family, let us help take care of them.</p>
-          <button class="border-0" id="hover">Learn more about us</button>
+          <button class="border-0 animate__animated animate__fadeInLeft" id="hover">Learn more about us</button>
         </div>
       </div>
       <!--Bottom-->
       <div class="row justify-content-center align-items-center">
-        <div class="col-2">
+        <div class="col-2 animate__animated animate__fadeInTopLeft">
           <img src="../assets/images/food-transparent-5-200x112.png" id="size" alt="">
         </div>
-        <div class="col-4 text-white">
+        <div class="col-4 text-white animate__animated animate__fadeInTopRight">
           <span class="me-4">Get $25 OFF your first purchase of our homemade pet food!</span> <a href="#">Visit the shop</a>
         </div>
       </div>
@@ -102,4 +102,19 @@ export default {
     }
   }
 }
+
+/*LIBRERIE*/
+
+.animate__fadeInUp {
+  --animate-duration: 3.5s;
+}
+
+.animate__fadeInTopLeft{
+  --animate-duration: 5s;
+}
+
+.animate__fadeInTopRight{
+  --animate-duration: 5s;
+}
+
 </style>

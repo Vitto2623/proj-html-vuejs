@@ -26,16 +26,24 @@
 
     <!---BOTTOM HEADER-->
     <div class="bottom-header py-2">
+      <!--NAV-BAR-->
       <nav>
         <ul class="d-flex justify-content-center list-unstyled mb-0">
-          <li v-for="(link, index) in HeaderLinks" :key="'primo'+index"> 
-            <a href="#" class="m-3 text-decoration-none fw-bold" :class="{active: link.current}">{{link.text}}<span class="fas fa-angle-down ms-2"></span></a>
+          <li v-for="(link, index) in HeaderLinks" :key="'primo'+index" class="d-flex justify-content-center align-items-center">
+            <div class="dropdown" id="menù">
+              <button href="#" class="m-3 text-decoration-none fw-bold border-0 btn btn-success" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" :class="{active: link.current}">{{link.text}}<span class="fas fa-angle-down ms-2"></span></button>
+                <li class="menu dropdown-menu bg-black" aria-labelledby="dropdownMenuButton1"><a class="dropdown-item my-bg" href="#"  v-for="(link, index) in  NavToggleMenu" :key="'secondo'+index">{{link.text}}</a></li>
+            </div>
           </li>
-          <li v-for="(element, index) in HeaderLinksSpecial" :key="'secondo'+index">
-            <a href="#" class="m-3 text-decoration-none  fw-bold">{{element.text}}</a>
+          <li v-for="(element, index) in HeaderLinksSpecial" :key="'secondo'+index" class="d-flex justify-content-center align-items-center">
+            <div class="dropdown">
+              <button href="#" class="m-3 text-decoration-none  fw-bold border-0 btn btn-secondary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >{{element.text}}</button>
+              <li class="menu dropdown-menu dropdown-menu-end bg-black" aria-labelledby="dropdownMenuButton1"><a class="dropdown-item  my-bg" href="#" v-for="(link, index) in  NavToggleMenu2" :key="'terzo'+index">{{link.text}}</a></li>
+            </div>
           </li>
         </ul>
       </nav>
+      <!--/ NAV-BAR-->
     </div>
   </div>
 </template>
@@ -73,6 +81,28 @@ export default {
           text: 'Contact',
           url: '#'
         }
+      ],
+      NavToggleMenu: [
+        {
+          text: 'Sezione Prodotti',
+        },
+        {
+          text: 'Lavora con noi',
+        },
+        {
+          text: 'Chi siamo',
+        }
+      ],
+      NavToggleMenu2: [
+        {
+          text: 'Dove siamo',
+        },
+        {
+          text: 'Politiche aziendali',
+        },
+        {
+          text: 'Pets 2.0',
+        }
       ]
     };
   }
@@ -95,16 +125,14 @@ div.bottom-header{
   }
   ul{
     height: 40px;
-    line-height: 55px;
     li{
-      line-height: 40px;
-      a{
+      button{
         color: grey;
+        background: border-box;
         &.active,
         &:hover{
           color: black;
         }
-
       }
     }
   }
@@ -121,5 +149,22 @@ div.bottom-header{
     border-radius: 50px;
     width: 600px;
   }
+}
+
+@keyframes mymove {
+  from {top: -29px;}
+  to {top: 0px;}
+}
+
+.menu{
+  width: 800px;
+  animation: mymove 0.90s ease-out;
+  font-size: 1.10em;
+  border-radius: 12px;
+}
+
+.my-bg{
+  background-color: $color-brand;
+  color: white;
 }
 </style>

@@ -9,7 +9,7 @@
         </div>
       </div>
       <!--Articoli-per-cani-->
-      <div class="container-fluid">
+      <div class="container-fluid animate__animated animate__fadeInDown animate__delay-2s">
         <div class="row justify-content-center mb-5">
             <div class="col-2 d-flex flex-column align-items-center mb-5" v-for="(element, index) in product" :key="'primo'+index">
                   <div class="item-card">
@@ -28,7 +28,7 @@
         </div>
       </div>
       <!--Food-Section-->
-      <div class="my-container">
+      <div class="my-container animate__animated animate__bounceInUp animate__delay-2s">
         <div class="food-card d-flex flex-column text-center align-items-center justify-content-center" v-for="(element, index) in food" 
         :key="'secondo'+index">
           <h1>{{element.name}}</h1>
@@ -38,7 +38,7 @@
         </div>
       </div>
       <!---->
-      <div class="arrivals-weekly">
+      <div class="arrivals-weekly animate__animated animate__fadeInDown animate__delay-3s">
         <div class="lay-over"></div>
         <h6 class="text-white mb-4">FIND THE BEST ANIMAL SUPPLIES</h6>
         <h2 class="text-white fs-1 fw-bolder mb-4">New arrivals weekly</h2>
@@ -47,7 +47,7 @@
       <div class="container-fluid">
         <div class="row my-row mt-5">
           <!--Top-section-->
-          <div class="top d-flex justify-content-between align-items-center mt-5">
+          <div class="top d-flex justify-content-between align-items-center mt-5 animate__animated animate__fadeInDown animate__delay-3.5s">
             <div>
               <h6>All-time best sellers</h6>
               <h3>Items everyone loves</h3>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <!--Bottom-section-->
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mt-5 animate__animated animate__fadeInDown animate__delay-4s">
           <div class="col-2 m-1 d-flex flex-column align-items-center" v-for="(element, index) in product2" :key="'terzo' +index">
             <div class="item-card d-flex align-items-center justify-content-center">
                 <div class="container-overlay">
@@ -99,7 +99,7 @@
           </div>
         </div>
         <!--Form-->
-        <div id="form">
+        <div id="form" class="animate__animated animate__fadeInDown animate__delay-4.5s">
           <form action="#">
             <h2>Join our newsletter</h2>
             <p class="p-0 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae tempore deserunt aliquam non dignissimos corrupti itaque suscipit ullam quasi! Ipsam eius fugiat soluta accusamus ex delectus exercitationem, quam earum.</p>
@@ -110,7 +110,7 @@
           </form>
         </div>
         <!--Recent-articles-->
-        <div class="container-fluid">
+        <div class="container-fluid animate__animated animate__fadeInDown animate__delay-5s">
           <div class="row text-center mt-5">
             <div class="col-12">
               <h2>Get the best tips & tricks</h2>
@@ -143,15 +143,15 @@
           </div>
         </div>
         <!---->
-        <div id="section-of-best-products">
+        <div id="section-of-best-products" class="animate__animated animate__fadeInDown animate__delay-5.5s animate__slower	">
           <div class="d-flex">
-            <div id="left-image" class="d-flex flex-column align-items-center justify-content-center">
+            <div id="left-image" class="d-flex flex-column align-items-center justify-content-center animate__animated animate__fadeInDown animate__delay-5.5s animate__slower	">
               <div class="lay-over"></div>
               <h6 class="text-white">FIND THE BEST ANIMAL SUPPLIES</h6>
               <h2 class="text-white mt-3">Popular accessories</h2>
               <button class="border-0 mt-3">View all toys accessories</button>
             </div>
-            <div id="right-image" class="d-flex flex-column align-items-center justify-content-center">
+            <div id="right-image" class="d-flex flex-column align-items-center justify-content-center animate__animated animate__fadeInDown animate__delay-5.5s animate__slower	">
               <div class="lay-over"></div>
               <h6 class="text-white">FIND THE BEST FOOD</h6>
               <h2 class="text-white mt-3">New food arrival</h2>
@@ -179,7 +179,7 @@
             </div>
           </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid animate__animated animate__fadeInDown animate__delay-5.5s">
           <div class="row text-center mt-5">
             <div class="col-12">
               <h2>New products arrival</h2>
@@ -469,6 +469,7 @@ p{
     background-color: #3d6f42;
   }
 }
+
 #users-testimonials{
 width: 100%;
 height: 580px;
@@ -483,6 +484,7 @@ margin-top: 116px;
     color: #5f838a;
   }
 }
+
 #form{
   margin: 0 auto;
   width: 65%;
@@ -504,6 +506,7 @@ margin-top: 116px;
     background-color: #3d6f42;
   }
 }
+
 button{
   background-color: #3d6f42;
   padding: 5px 20px;
@@ -616,5 +619,17 @@ button{
 
 .container-overlay:hover .overlay {
   opacity: 1;
+}
+
+/*Librerie*/
+
+.animate__fadeInDown{
+    --animate-delay: 1.5s;
+    --animate-duration: 3s;
+}
+
+.animate__bounceInUp{
+  --animate-delay: 1.5s;
+  --animate-duration: 3s;
 }
 </style>
